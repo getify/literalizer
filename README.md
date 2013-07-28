@@ -8,7 +8,7 @@ The complex literals that will be tokenized are:
 * strings (" or ' delimited)
 * comments (single-line or multi-line)
 * regular expressions
-* ES6 template strings (`` delimited)
+* ES6 template strings (` delimited)
 
 What will be returned is an array of tokens, which will be one of the above types, or a general token for everything else.
 
