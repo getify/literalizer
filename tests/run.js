@@ -34,24 +34,32 @@ console.log("Running test suite...");
 
 // process the test suite
 test_sources.forEach(function(source,idx){
-	var res;
+	var res, error;
 
+	// catch any errors, as some of the tests expect 'em
 	try {
 		res = LIT.tokenize(source);
+		res = JSON.stringify(res);
 	}
 	catch (err) {
-		console.log("Test #" + (idx+1) + ": " + err.toString());
-		passed = false;
-		return;
+		res = err.toString();
+		if (err.stack) error = err.stack.toString();
+		else error = err.toString();
 	}
 
 	// if results have already been recorded, check against them
 	if (test_results[idx] != null) {
-		if (JSON.stringify(res).trim() === test_results[idx].trim()) {
+		if (res === test_results[idx].trim()) {
 			console.log("Test #" + (idx+1) + ": passed");
 		}
 		else {
 			console.log("Test #" + (idx+1) + ": failed");
+			if (error) {
+				console.log(error);
+			}
+			else {
+				console.log("\t" + res);
+			}
 			passed = false;
 		}
 	}
@@ -60,7 +68,7 @@ test_sources.forEach(function(source,idx){
 		console.log("Test #" + (idx+1) + ": skipped, results recorded");
 		fs.writeFileSync(
 			path.join(test_dir,(idx+1) + ".result.js"),
-			JSON.stringify(res),
+			res,
 			{ encoding: "utf8" }
 		);
 	}
