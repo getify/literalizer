@@ -38,7 +38,7 @@ test_sources.forEach(function(source,idx){
 
 	// if results have already been recorded, check against them
 	if (test_results[idx] != null) {
-		if (JSON.stringify(res) === test_results[idx]) {
+		if (JSON.stringify(res).trim() === test_results[idx].trim()) {
 			console.log("Test #" + (idx+1) + ": passed");
 		}
 		else {
