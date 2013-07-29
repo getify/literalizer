@@ -34,7 +34,16 @@ console.log("Running test suite...");
 
 // process the test suite
 test_sources.forEach(function(source,idx){
-	var res = LIT.tokenize(source);
+	var res;
+
+	try {
+		res = LIT.tokenize(source);
+	}
+	catch (err) {
+		console.log("Test #" + (idx+1) + ": " + err.toString());
+		passed = false;
+		return;
+	}
 
 	// if results have already been recorded, check against them
 	if (test_results[idx] != null) {
