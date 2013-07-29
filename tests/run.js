@@ -22,7 +22,7 @@ test_files.forEach(function(file,idx){
 			{ encoding: "utf8" }
 		);
 	}
-	else if (match = file.match(/(\d+)\.result\.js/)) {
+	else if (match = file.match(/(\d+)\.result\.txt/)) {
 		test_results[Number(match[1])-1] = fs.readFileSync(
 			path.join(test_dir,file),
 			{ encoding: "utf8" }
@@ -67,7 +67,7 @@ test_sources.forEach(function(source,idx){
 	else {
 		console.log("Test #" + (idx+1) + ": skipped, results recorded");
 		fs.writeFileSync(
-			path.join(test_dir,(idx+1) + ".result.js"),
+			path.join(test_dir,(idx+1) + ".result.txt"),
 			res,
 			{ encoding: "utf8" }
 		);
