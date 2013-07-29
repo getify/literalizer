@@ -11,3 +11,4 @@ here is another\
 }
 
 foo("wo\"r\"ld","!");
+
