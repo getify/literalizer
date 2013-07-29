@@ -13,9 +13,17 @@
 	},
 	"keywords": [
 		"tokenizer",
-		"literals"
+		"lexer",
+		"parser"
 	],
+	"bugs": {
+		"url": "https://github.com/getify/literalizer/issues",
+		"email": "getify@gmail.com"
+	},
 	"dependencies": {
-	}
+	},
+	"homepage": "http://github.com/getify/literalizer",
+	"author": "Kyle Simpson <getify@gmail.com>",
+	"license": "MIT"
 }
 
