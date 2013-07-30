@@ -1,6 +1,6 @@
 {
 	"name": "literalizer",
-	"version": "0.0.4-a",
+	"version": "0.0.5-a",
 	"author": "Kyle Simpson",
 	"description": "JS tokenizer which ONLY tokenizes complex literals so they can easily be skipped over in other parsing tasks",
 	"main": "lib/lit.js",
