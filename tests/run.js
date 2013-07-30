@@ -47,6 +47,12 @@ test_sources.forEach(function(source,idx){
 		else error = err.toString();
 	}
 
+	// include any warnings
+	if (LIT.warnings.length > 0) {
+		res += "\n" + JSON.stringify(LIT.warnings);
+		LIT.reset();
+	}
+
 	// if results have already been recorded, check against them
 	if (test_results[idx] != null) {
 		if (res === test_results[idx].trim()) {

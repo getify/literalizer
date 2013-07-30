@@ -1,1 +1,2 @@
-SyntaxError: Unterminated multi-line comment at end of file
+[{"type":0,"val":"/* test #5\n * testing how literalizer works\n *\n"}]
+["Unterminated multi-line comment at end of file"]
