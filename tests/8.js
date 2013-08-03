@@ -40,4 +40,6 @@ if(a)/a/g;
 while  (a||(b)&&(c||d)) /a/g;
 for (;;)  
 /a/g;
+(a)/a/g;
+(a) (a) /a/g;
 /a/
