@@ -53,6 +53,7 @@ for (;;)
 a={a:/a/g};
 {a:{a:/a/g}};
 a={a:{a:/a/g}};
+{a();a:/a/g;a:a();a:/a/g;};
 {a:function(){}/a/g};
 {a:
 function(){}/a/g}

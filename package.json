@@ -1,6 +1,6 @@
 {
 	"name": "literalizer",
-	"version": "0.0.8-b",
+	"version": "0.0.8-c",
 	"description": "JS tokenizer which ONLY tokenizes complex literals so they can easily be skipped over in other parsing tasks",
 	"main": "lib/lit.js",
 	"scripts": {
