@@ -42,4 +42,42 @@ for (;;)
 /a/g;
 (a)/a/g;
 (a) (a) /a/g;
+{a:/a/g};
+{a:
+/a/g};
+{}/a/g;
+{a:{}/a/g};
+{a:{}
+/a/g}
+a={a:/a/g};
+{a:{a:/a/g}};
+a={a:{a:/a/g}};
+{a:function(){}/a/g};
+{a:
+function(){}/a/g}
+{a:{a:function(){}/a/g}};
+{a:
+	{a:
+		function(){}/a/g}};
+a={a:function(){}/a/g};
+a={a:{a:function(){}/a/g}};
+a
+=
+{a:{a:function(){}/a/g}};
+a{a:{a:function(){}/a/g}};
+a
+// a comment
+{a:{a:function(){}/a/g}};
+a
+/* a comment */
+	{a:{a:function(){}/a/g}};
+a=>/a/g;
+a=>a/a/g;
+"a"
+{}/a/g;
+a/a/g;
+a
+/a/g;
+a
+{}/a/g;
 /a/
