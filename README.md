@@ -1,17 +1,34 @@
-literalizer
-===========
+# literalizer
 
-JS tokenizer which ONLY tokenizes complex literals so they can easily be skipped over in other parsing tasks.
+Specialized JS lexer which applies heuristic rules to identify the complex literals first. These literals cause frustration/complication in any JS "parsing" task, as they are a primary source of context-sensitive grammar.
 
-The complex literals that will be tokenized are:
+By applying various heuristic rules during lexing, however, these literals can be identified in a first-pass, leaving everything else alone. This allows subsequent parsing to be significantly less complex, possibly even context-free (regular expressions!), or it allows you to easily find the complex literals and target them for special processing.
 
-* strings (" or ' delimited)
+## Some Use Cases
+1. Syntax highlighting is a far more trivial task with regular expressions if these complex literals are already pre-identified and cannot cause false-matches.
+
+2. Easily search for special meta-commands contained in code comments, such as `// @sourceURL=..`.
+
+3. Find all regular expression literals and pass them through an optimization engine and then replace them with their optimized equivalents. 
+
+4. Implement macros or other code pragmas which have to be processed before normal JS parsing can proceed.
+
+5. Parse out certain code patterns for things like dependency injection.
+
+## Relaxed 
+Another key feature of *literalizer* is that it's a "relaxed" lexer, in that it can run against code which is not strictly valid JS and yet still give a best-effort try. Most of the heuristics *are* based off fundamental language grammar, such as ASI and where and how statements and expressions can appear.
+
+However, as long as your code variations don't change the rules for statements and expressions, many syntax/grammar errors, non-standard keywords/constructs, and other invalidations will still just pass through successfully.
+
+A relaxed lexer is also crucial for tasks like on-the-fly syntax highlighting, which must be able to adjust to not-completely-valid code.
+
+## Complex Literals
+
+The complex literals that will be identified are:
+
+* strings (`"` or `'` delimited)
 * comments (single-line or multi-line)
 * regular expressions
 * ES6 template strings (` delimited)
 
-What will be returned is an array of tokens, which will be one of the above types, or a general token for everything else.
-
-Think of this as a first-pass-tokenizer, which tokenizes the complex literals first, so that you can make a second-pass of tokenization/parsing and be able to target or ignore (aka, skip over) these more troublesome-to-parse constructs.
-
-Usually the contents of these complex literals don't actually need to be parsed, but they often can confuse other parsing by giving false-positives. *literalizer* helps identify these complex literals so they can either be ignored, or so that you can find specific literals that do need further lexing/parsing.
+The output of *literalizer* is an array of tokens, which will be one of the above types, or a general-token type for everything else.
