@@ -2,4 +2,5 @@
  * testing how literalizer works
  */
 
-var foo = "abc
+var foo = "foo
+var bar = "bar
