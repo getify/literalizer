@@ -1,7 +1,7 @@
 {
 	"name": "literalizer",
-	"version": "0.2.0-a",
-	"description": "JS tokenizer which ONLY tokenizes complex literals so they can easily be skipped over in other parsing tasks",
+	"version": "0.2.0-b",
+	"description": "Specialized heuristic lexer for JS to identify complex literals",
 	"main": "lib/lit.js",
 	"scripts": {
 		"test": "node tests/run.js"
