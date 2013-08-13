@@ -38,7 +38,7 @@ test_sources.forEach(function(source,idx){
 
 	// catch any errors, as some of the tests expect 'em
 	try {
-		res = LIT.tokenize(source);
+		res = LIT.lex(source);
 		res = JSON.stringify(res);
 	}
 	catch (err) {

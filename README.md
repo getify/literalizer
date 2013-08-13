@@ -30,5 +30,6 @@ The complex literals that will be identified are:
 * comments (single-line or multi-line)
 * regular expressions
 * ES6 template strings (` delimited)
+* Number literals (decimal, octal, hex, binary)
 
 The output of *literalizer* is an array of tokens, which will be one of the above types, or a general-token type for everything else.
