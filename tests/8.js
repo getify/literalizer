@@ -73,6 +73,10 @@ a
 a
 /* a comment */
 	{a:{a:function(){}/a/g}};
+function* foo(){/a/g}/a/g;
+function*(){/a/g}/a/g;
+a=function* foo(){/a/g}/a/g;
+a=function*(){/a/g}/a/g;
 a=>/a/g;
 a=>a/a/g;
 "a"
