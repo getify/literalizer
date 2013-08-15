@@ -1,0 +1,132 @@
+{
+	"results": [
+		{
+			"type": 1,
+			"val": "/* test #9\n * testing how literalizer works\n */"
+		},
+		{
+			"type": 0,
+			"val": "\n\na="
+		},
+		{
+			"type": 5,
+			"val": "42"
+		},
+		{
+			"type": 0,
+			"val": ";\na=-"
+		},
+		{
+			"type": 5,
+			"val": "42"
+		},
+		{
+			"type": 0,
+			"val": ";\na="
+		},
+		{
+			"type": 5,
+			"val": ".42"
+		},
+		{
+			"type": 0,
+			"val": ";\na="
+		},
+		{
+			"type": 5,
+			"val": "0.42"
+		},
+		{
+			"type": 0,
+			"val": ";\na="
+		},
+		{
+			"type": 5,
+			"val": "42."
+		},
+		{
+			"type": 0,
+			"val": ";\na="
+		},
+		{
+			"type": 5,
+			"val": "42.3"
+		},
+		{
+			"type": 0,
+			"val": ";\na="
+		},
+		{
+			"type": 5,
+			"val": "42.3"
+		},
+		{
+			"type": 0,
+			"val": ".a;\na="
+		},
+		{
+			"type": 5,
+			"val": "42."
+		},
+		{
+			"type": 0,
+			"val": ".a;\na="
+		},
+		{
+			"type": 5,
+			"val": "42e3"
+		},
+		{
+			"type": 0,
+			"val": ";\na="
+		},
+		{
+			"type": 5,
+			"val": "42.e3"
+		},
+		{
+			"type": 0,
+			"val": ";\na="
+		},
+		{
+			"type": 5,
+			"val": ".42e3"
+		},
+		{
+			"type": 0,
+			"val": ";\na="
+		},
+		{
+			"type": 5,
+			"val": "42e-3"
+		},
+		{
+			"type": 0,
+			"val": ";\na="
+		},
+		{
+			"type": 5,
+			"val": "42.e-3"
+		},
+		{
+			"type": 0,
+			"val": ";\na="
+		},
+		{
+			"type": 5,
+			"val": "0xaa"
+		},
+		{
+			"type": 0,
+			"val": ";\na="
+		},
+		{
+			"type": 5,
+			"val": "042"
+		},
+		{
+			"type": 0,
+			"val": ";\n"
+		}
+	]
+}

@@ -22,7 +22,7 @@ test_files.forEach(function(file,idx){
 			{ encoding: "utf8" }
 		);
 	}
-	else if (match = file.match(/(\d+)\.result\.txt/)) {
+	else if (match = file.match(/(\d+)\.result\.json/)) {
 		test_results[Number(match[1])-1] = fs.readFileSync(
 			path.join(test_dir,file),
 			{ encoding: "utf8" }
@@ -39,19 +39,22 @@ test_sources.forEach(function(source,idx){
 	// catch any errors, as some of the tests expect 'em
 	try {
 		res = LIT.lex(source);
-		res = JSON.stringify(res);
+		res = "{\"results\":" + JSON.stringify(res,null,"\t");
 	}
 	catch (err) {
-		res = err.toString();
+		res = "{\"error\":" + err.toString();
 		if (err.stack) error = err.stack.toString();
 		else error = err.toString();
 	}
 
 	// include any warnings
 	if (LIT.warnings.length > 0) {
-		res += "\n" + JSON.stringify(LIT.warnings);
+		res += ",\"warnings\":" + JSON.stringify(LIT.warnings,null,"\t");
 		LIT.reset();
 	}
+
+	res += "}";
+	res = JSON.stringify(JSON.parse(res),null,"\t");
 
 	// if results have already been recorded, check against them
 	if (test_results[idx] != null) {
@@ -73,7 +76,7 @@ test_sources.forEach(function(source,idx){
 	else {
 		console.log("Test #" + (idx+1) + ": skipped, results recorded");
 		fs.writeFileSync(
-			path.join(test_dir,(idx+1) + ".result.txt"),
+			path.join(test_dir,(idx+1) + ".result.json"),
 			res,
 			{ encoding: "utf8" }
 		);
