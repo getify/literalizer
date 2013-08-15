@@ -67,6 +67,7 @@ a
 =
 {a:{a:function(){}/a/g}};
 a{a:{a:function(){}/a/g}};
+{a:{a={a:function(){a={a:a/a/g}/a/g}(/a/g)/a/g}/a/g}/a/g}/a/g;
 a
 // a comment
 {a:{a:function(){}/a/g}};
