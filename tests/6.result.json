@@ -1,24 +1,24 @@
 {
-	"results": [
-		{
-			"type": 1,
-			"val": "/* test #6\n * testing how literalizer works\n */"
-		},
-		{
-			"type": 0,
-			"val": "\n\nvar foo = "
-		},
-		{
-			"type": 2,
-			"val": "\"foo"
-		},
-		{
-			"type": 0,
-			"val": "\nvar bar = \"bar"
-		}
-	],
-	"warnings": [
-		"Unterminated string literal: \"foo",
-		"Unterminated string literal at end of file"
-	]
+    "results": [
+        {
+            "type": 1,
+            "val": "/* test #6\n * testing how literalizer works\n */"
+        },
+        {
+            "type": 0,
+            "val": "\n\nvar foo = "
+        },
+        {
+            "type": 2,
+            "val": "\"foo"
+        },
+        {
+            "type": 0,
+            "val": "\nvar bar = \"bar"
+        }
+    ],
+    "warnings": [
+        "Unterminated string literal: \"foo",
+        "Unterminated string literal at end of file"
+    ]
 }

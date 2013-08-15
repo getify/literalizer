@@ -1,5 +1,29 @@
+// filter the diff output a bit
+function filterDiff(obj) {
+	return JSON.stringify(
+		obj,
+		function(key,val){
+			if (
+				val == null ||
+				(
+					typeof val === "object" &&
+					!Array.isArray(val) &&
+					val.added == null && val.removed == null
+				)
+			) {
+				return;
+			}
+			else {
+				return val;
+			}
+		},
+		"\t"
+	);
+}
+
 var fs = require("fs"),
 	path = require("path"),
+	diff = require("diff"),
 
 	test_dir = __dirname,
 	test_files = fs.readdirSync(test_dir),
@@ -39,7 +63,7 @@ test_sources.forEach(function(source,idx){
 	// catch any errors, as some of the tests expect 'em
 	try {
 		res = LIT.lex(source);
-		res = "{\"results\":" + JSON.stringify(res,null,"\t");
+		res = "{\"results\":" + JSON.stringify(res,null,"    ");
 	}
 	catch (err) {
 		res = "{\"error\":" + err.toString();
@@ -49,12 +73,12 @@ test_sources.forEach(function(source,idx){
 
 	// include any warnings
 	if (LIT.warnings.length > 0) {
-		res += ",\"warnings\":" + JSON.stringify(LIT.warnings,null,"\t");
+		res += ",\"warnings\":" + JSON.stringify(LIT.warnings,null,"    ");
 		LIT.reset();
 	}
 
 	res += "}";
-	res = JSON.stringify(JSON.parse(res),null,"\t");
+	res = JSON.stringify(JSON.parse(res),null,"    ");
 
 	// if results have already been recorded, check against them
 	if (test_results[idx] != null) {
@@ -67,7 +91,11 @@ test_sources.forEach(function(source,idx){
 				console.log(error);
 			}
 			else {
-				console.log("\t" + res);
+				console.log(
+					filterDiff(
+						diff.diffLines(test_results[idx].trim(),res)
+					)
+				);
 			}
 			passed = false;
 		}

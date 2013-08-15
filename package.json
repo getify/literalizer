@@ -20,6 +20,7 @@
 		"email": "getify@gmail.com"
 	},
 	"dependencies": {
+		"diff": ">= 1.0.5"
 	},
 	"homepage": "http://github.com/getify/literalizer",
 	"author": "Kyle Simpson <getify@gmail.com>",

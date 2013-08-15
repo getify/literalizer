@@ -1,11 +1,11 @@
 {
-	"results": [
-		{
-			"type": 0,
-			"val": "/* test #5\n * testing how literalizer works\n *\n"
-		}
-	],
-	"warnings": [
-		"Unterminated multi-line comment at end of file"
-	]
+    "results": [
+        {
+            "type": 0,
+            "val": "/* test #5\n * testing how literalizer works\n *\n"
+        }
+    ],
+    "warnings": [
+        "Unterminated multi-line comment at end of file"
+    ]
 }
