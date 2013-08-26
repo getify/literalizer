@@ -1,6 +1,6 @@
 {
 	"name": "literalizer",
-	"version": "0.2.2-d",
+	"version": "0.2.2-e",
 	"description": "Specialized heuristic lexer for JS to identify complex literals",
 	"main": "lib/lit.js",
 	"scripts": {
@@ -19,7 +19,7 @@
 		"url": "https://github.com/getify/literalizer/issues",
 		"email": "getify@gmail.com"
 	},
-	"dependencies": {
+	"devDependencies": {
 		"diff": ">= 1.0.5"
 	},
 	"homepage": "http://github.com/getify/literalizer",
