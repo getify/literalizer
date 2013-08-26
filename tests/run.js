@@ -1,3 +1,9 @@
+/*! literalizer
+    (c) Kyle Simpson
+    MIT License: http://getify.mit-license.org
+*/
+
+
 // filter the diff output a bit
 function filterDiff(obj) {
 	return JSON.stringify(
@@ -33,7 +39,7 @@ var fs = require("fs"),
 	test_sources = [],
 	test_results = [],
 
-	passed = true
+	suite_passed = true
 ;
 
 // collect all the test file sources and results
@@ -60,13 +66,14 @@ console.log("Running test suite...");
 test_sources.forEach(function(source,idx){
 	var res, error;
 
+
 	// catch any errors, as some of the tests expect 'em
 	try {
 		res = LIT.lex(source);
 		res = "{\"results\":" + JSON.stringify(res,null,"    ");
 	}
 	catch (err) {
-		res = "{\"error\":" + err.toString();
+		res = "{\"error\":\"" + err.toString().replace(/"/,"\\\"") + "\"";
 		if (err.stack) error = err.stack.toString();
 		else error = err.toString();
 	}
@@ -97,7 +104,7 @@ test_sources.forEach(function(source,idx){
 					)
 				);
 			}
-			passed = false;
+			suite_passed = false;
 		}
 	}
 	// otherwise, simply record the results in the proper file
@@ -111,7 +118,7 @@ test_sources.forEach(function(source,idx){
 	}
 });
 
-if (passed) {
+if (suite_passed) {
 	console.log("Test suite passed!");
 }
 else {
