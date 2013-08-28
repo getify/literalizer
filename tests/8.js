@@ -7,6 +7,8 @@ throw /a/g;
 delete /a/g;
 in /a/g;
 a.in /a/g;
+a. in /a/g;
+a . in /a/g;
 42.in /b/g;
 42. in /b/g;
 else /a/g;

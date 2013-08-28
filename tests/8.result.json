@@ -38,7 +38,7 @@
         },
         {
             "type": 0,
-            "val": ";\na.in /a/g;\n"
+            "val": ";\na.in /a/g;\na. in /a/g;\na . in /a/g;\n"
         },
         {
             "type": 5,
