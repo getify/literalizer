@@ -38,6 +38,38 @@
         },
         {
             "type": 0,
+            "val": ";\na.in /a/g;\n"
+        },
+        {
+            "type": 5,
+            "val": "42."
+        },
+        {
+            "type": 0,
+            "val": "in "
+        },
+        {
+            "type": 4,
+            "val": "/b/g"
+        },
+        {
+            "type": 0,
+            "val": ";\n"
+        },
+        {
+            "type": 5,
+            "val": "42."
+        },
+        {
+            "type": 0,
+            "val": " in "
+        },
+        {
+            "type": 4,
+            "val": "/b/g"
+        },
+        {
+            "type": 0,
             "val": ";\nelse "
         },
         {
@@ -318,7 +350,7 @@
         },
         {
             "type": 0,
-            "val": ";\nfor (;;)  \n"
+            "val": ";\nfor (;;)\n"
         },
         {
             "type": 4,

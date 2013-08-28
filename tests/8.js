@@ -6,6 +6,9 @@ return /a/g;
 throw /a/g;
 delete /a/g;
 in /a/g;
+a.in /a/g;
+42.in /b/g;
+42. in /b/g;
 else /a/g;
 void /a/g;
 typeof /a/g;
@@ -39,7 +42,7 @@ yield /a/g;
 /a/;
 if(a)/a/g;
 while  (a||(b)&&(c||d)) /a/g;
-for (;;)  
+for (;;)
 /a/g;
 (a)/a/g;
 (a) (a) /a/g;
