@@ -1,6 +1,6 @@
 {
 	"name": "literalizer",
-	"version": "0.2.3-b",
+	"version": "0.3.0-a",
 	"description": "Specialized heuristic lexer for JS to identify complex literals",
 	"main": "lib/lit.js",
 	"scripts": {
