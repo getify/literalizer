@@ -88,6 +88,8 @@ a=function* foo(){/a/g}/a/g;
 a=function*(){/a/g}/a/g;
 a=>/a/g;
 a=>a/a/g;
+a={a(){a:\n{}/a/g},b(){a:\n{}/a/g}};
+{a(){a:\n{}/a/g},b(){a:\n{}/a/g}};
 "a"
 {}/a/g;
 a/a/g;
