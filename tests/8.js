@@ -88,6 +88,10 @@ a=>a/a/g;
 "a"
 {}/a/g;
 a/a/g;
+case "a":{}/a/g;
+default:{}/a/g;
+a:{}/a/g;
+a b:{}/a/g;
 a
 /a/g;
 a

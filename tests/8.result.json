@@ -606,7 +606,39 @@
         },
         {
             "type": 0,
-            "val": ";\na/a/g;\na\n/a/g;\na\n{}"
+            "val": ";\na/a/g;\ncase "
+        },
+        {
+            "type": 2,
+            "val": "\"a\""
+        },
+        {
+            "type": 0,
+            "val": ":{}"
+        },
+        {
+            "type": 4,
+            "val": "/a/g"
+        },
+        {
+            "type": 0,
+            "val": ";\ndefault:{}"
+        },
+        {
+            "type": 4,
+            "val": "/a/g"
+        },
+        {
+            "type": 0,
+            "val": ";\na:{}"
+        },
+        {
+            "type": 4,
+            "val": "/a/g"
+        },
+        {
+            "type": 0,
+            "val": ";\na b:{}/a/g;\na\n/a/g;\na\n{}"
         },
         {
             "type": 4,
