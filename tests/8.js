@@ -90,6 +90,18 @@ a=>/a/g;
 a=>a/a/g;
 a={a(){a:\n{}/a/g},b(){a:\n{}/a/g}};
 {a(){a:\n{}/a/g},b(){a:\n{}/a/g}};
+a={a:function(b=(c={d(){a:
+	{}/a/g},e:
+	{}/a/g})=>{a:
+	{}/a/g}){a:
+	{}/a/g},b:
+	{}/a/g
+};
+for(a={b:
+	{}/a/g};a=function(c=(d={e:f}/a/g)=>/a/g){a:
+	{}/a/g};){a:
+	{}/a/g
+};
 "a"
 {}/a/g;
 a/a/g;

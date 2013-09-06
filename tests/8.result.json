@@ -638,7 +638,55 @@
         },
         {
             "type": 0,
-            "val": "}};\n"
+            "val": "}};\na={a:function(b=(c={d(){a:\n\t{}"
+        },
+        {
+            "type": 4,
+            "val": "/a/g"
+        },
+        {
+            "type": 0,
+            "val": "},e:\n\t{}/a/g})=>{a:\n\t{}"
+        },
+        {
+            "type": 4,
+            "val": "/a/g"
+        },
+        {
+            "type": 0,
+            "val": "}){a:\n\t{}"
+        },
+        {
+            "type": 4,
+            "val": "/a/g"
+        },
+        {
+            "type": 0,
+            "val": "},b:\n\t{}/a/g\n};\nfor(a={b:\n\t{}/a/g};a=function(c=(d={e:f}/a/g)=>"
+        },
+        {
+            "type": 4,
+            "val": "/a/g"
+        },
+        {
+            "type": 0,
+            "val": "){a:\n\t{}"
+        },
+        {
+            "type": 4,
+            "val": "/a/g"
+        },
+        {
+            "type": 0,
+            "val": "};){a:\n\t{}"
+        },
+        {
+            "type": 4,
+            "val": "/a/g"
+        },
+        {
+            "type": 0,
+            "val": "\n};\n"
         },
         {
             "type": 2,
