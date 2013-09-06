@@ -102,7 +102,31 @@
         },
         {
             "type": 0,
-            "val": ";\n("
+            "val": ";\nreturn"
+        },
+        {
+            "type": 1,
+            "val": "/*a\n*/"
+        },
+        {
+            "type": 0,
+            "val": "{}"
+        },
+        {
+            "type": 4,
+            "val": "/a/g"
+        },
+        {
+            "type": 0,
+            "val": ";\nreturn"
+        },
+        {
+            "type": 1,
+            "val": "/*a*/"
+        },
+        {
+            "type": 0,
+            "val": "{}/a/g;\n("
         },
         {
             "type": 4,

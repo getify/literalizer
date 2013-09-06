@@ -15,6 +15,9 @@ else /a/g;
 void /a/g;
 typeof /a/g;
 yield /a/g;
+return/*a
+*/{}/a/g;
+return/*a*/{}/a/g;
 (/a/g)
 [/a/g]
 {/a/g}
