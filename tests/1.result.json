@@ -18,7 +18,8 @@
         },
         {
             "type": 2,
-            "val": "\"Hello\""
+            "val": "\"Hello\"",
+            "raw": "\"Hello\""
         },
         {
             "type": 0,
@@ -26,7 +27,8 @@
         },
         {
             "type": 2,
-            "val": "\"world\""
+            "val": "\"world\"",
+            "raw": "\"world\""
         },
         {
             "type": 0,
@@ -34,7 +36,8 @@
         },
         {
             "type": 2,
-            "val": "\"!\""
+            "val": "\"!\"",
+            "raw": "\"!\""
         },
         {
             "type": 0,

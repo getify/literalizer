@@ -10,7 +10,8 @@
         },
         {
             "type": 2,
-            "val": "\"foo"
+            "val": "\"foo",
+            "raw": "\"foo"
         },
         {
             "type": 0,

@@ -42,6 +42,12 @@ var fs = require("fs"),
 	suite_passed = true
 ;
 
+
+// !!preserve these options!!
+LIT.opts.identify_number_literals = true;
+LIT.opts.identify_simple_literals = true;
+
+
 // collect all the test file sources and results
 test_files.forEach(function(file,idx){
 	var match;
