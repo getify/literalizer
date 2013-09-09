@@ -8,3 +8,13 @@ function foo(a,b) {
 }
 
 foo("world","!");
+
+// let's now test
+// HTML-style comment markers
+
+a<!--a
+-->a
+a-->a
+/*a*/-->a
+/*a
+a*/ /*a*/ -->a

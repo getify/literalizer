@@ -38,7 +38,71 @@
         },
         {
             "type": 0,
-            "val": ");\n"
+            "val": ");\n\n"
+        },
+        {
+            "type": 1,
+            "val": "// let's now test"
+        },
+        {
+            "type": 0,
+            "val": "\n"
+        },
+        {
+            "type": 1,
+            "val": "// HTML-style comment markers"
+        },
+        {
+            "type": 0,
+            "val": "\n\na"
+        },
+        {
+            "type": 1,
+            "val": "<!--a"
+        },
+        {
+            "type": 0,
+            "val": "\n"
+        },
+        {
+            "type": 1,
+            "val": "-->a"
+        },
+        {
+            "type": 0,
+            "val": "\na-->a\n"
+        },
+        {
+            "type": 1,
+            "val": "/*a*/"
+        },
+        {
+            "type": 1,
+            "val": "-->a"
+        },
+        {
+            "type": 0,
+            "val": "\n"
+        },
+        {
+            "type": 1,
+            "val": "/*a\na*/"
+        },
+        {
+            "type": 0,
+            "val": " "
+        },
+        {
+            "type": 1,
+            "val": "/*a*/"
+        },
+        {
+            "type": 0,
+            "val": " "
+        },
+        {
+            "type": 1,
+            "val": "-->a"
         }
     ]
 }
