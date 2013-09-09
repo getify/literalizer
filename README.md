@@ -20,22 +20,35 @@ Another key feature of *literalizer* is that it's a "relaxed" lexer, in that it 
 
 However, as long as your code variations don't change the rules for statements and expressions, many syntax/grammar errors, non-standard keywords/constructs, and other invalidations will still just pass through successfully.
 
-A relaxed lexer is also crucial for tasks like on-the-fly syntax highlighting, which must be able to adjust to not-completely-valid code.
+A relaxed lexer is also crucial for tasks like on-the-fly syntax highlighting, which must be able to adjust to not-***yet***-completely-valid code.
 
-## Complex Literals
-
-The complex literals that will be identified are:
+## Identified Literals
+The (complex) literals that will always be identified are:
 
 * strings (`"` or `'` delimited)
 * comments (single-line or multi-line)
 * regular expressions
 * ES6 template strings (` delimited)
-* Number literals (decimal, octal, hex, binary)
+
+### Optional Literals
+There are also [configuration options](#options) that control identification of:
+
+* (default: **on**) HTML-style comment markers (`<!--` and `-->`) as single-line comment delimiters; [more info](http://javascript.spec.whatwg.org/#comment-syntax)
+* (default: **off**) number literals, including integer, decimal, octal (ES5/ES6), hex (ES5/ES6), and binary (ES6 only)
+* (default: **off**) simple literals (`null`, `Infinity`, etc)
 
 The output of *literalizer* is an array of tokens, which will be one of the above types, or a general-token type for everything else.
 
-## License
+## Options
+*literalizer* can be configured to control which of the [optional literals](#optional-literals) are identified explicitly.
 
+* `LIT.opts.overlook_html_comment_markers` (boolean; default: `false`) - If set to `true`, will **overlook** (that is, refuse to recognize) the `<!--` and `-->` HTML-style comment markers as single-line comment delimiters, leaving them instead to be treated as standard JS operator sequences; [more info](http://javascript.spec.whatwg.org/#comment-syntax)
+
+* `LIT.opts.identify_number_literals` (boolean; default: `false`) - If set to `true`, will explicitly identify [number literals](#optional-literals)
+
+* `LIT.opts.identify_simple_literals` (boolean; default: `false`) - If set to `true`, will explicitly identify [simple literals](#optional-literals)
+
+## License
 The code and all the documentation are released under the MIT license.
 
 http://getify.mit-license.org/
