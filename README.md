@@ -37,8 +37,6 @@ There are also [configuration options](#options) that control identification of:
 * (default: **off**) number literals, including integer, decimal, octal (ES5/ES6), hex (ES5/ES6), and binary (ES6 only)
 * (default: **off**) simple literals (`null`, `Infinity`, etc)
 
-The output of *literalizer* is an array of tokens, which will be one of the above types, or a general-token type for everything else.
-
 ## Options
 *literalizer* can be configured to control which of the [optional literals](#optional-literals) are identified explicitly.
 
@@ -47,6 +45,17 @@ The output of *literalizer* is an array of tokens, which will be one of the abov
 * `LIT.opts.identify_number_literals` (boolean; default: `false`) - If set to `true`, will explicitly identify [number literals](#optional-literals)
 
 * `LIT.opts.identify_simple_literals` (boolean; default: `false`) - If set to `true`, will explicitly identify [simple literals](#optional-literals)
+
+## API
+*literalizer*'s API includes:
+
+* `LIT.lex(..)` takes a string of code and returns an array of segments, which each have a `type` property for identifying the segment type, according to [which literal](#identified-literals) (or general text) it represents.
+
+* `LIT.generate(..)` takes an array of segments (as produced by `lex(..)`) and re-generates the source code. This might be useful if you wanted to modify (or add/remove) segments after *literalizer* analysis and then re-compile the code.
+
+* `LIT.reset()` resets the `warnings` list from previous runs of `lex(..)`.
+
+* `LIT.warnings` is an array of any warnings encountered while lexing.
 
 ## License
 The code and all the documentation are released under the MIT license.
